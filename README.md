@@ -48,7 +48,7 @@ npm start
 ```
 
 ```
-// 쿼리 테스
+// 쿼리 테스트
 query {
   teams {
     id
@@ -59,5 +59,5 @@ query {
     cleaning_duty
     project
   }
-}트
+}
 ```
