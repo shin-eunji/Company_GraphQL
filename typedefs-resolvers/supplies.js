@@ -3,20 +3,20 @@ const dbWorks = require('../dbWorks')
 
 const typeDefs = gql`
     type Supply {
-        id: String
+        id: ID!
         team: Int
     }
 `
 const resolvers = {
-  Query: {
-    supplies: (parent, args) => dbWorks.getSupplies(args)
-  },
-  Mutation: {
-    deleteSupply: (parent, args) => dbWorks.deleteItem('supplies', args),
-  }
+    Query: {
+        supplies: (parent, args) => dbWorks.getSupplies(args)
+    },
+    Mutation: {
+        deleteSupply: (parent, args) => dbWorks.deleteItem('supplies', args),
+    }
 }
 
 module.exports = {
-  typeDefs: typeDefs,
-  resolvers: resolvers
+    typeDefs: typeDefs,
+    resolvers: resolvers
 }

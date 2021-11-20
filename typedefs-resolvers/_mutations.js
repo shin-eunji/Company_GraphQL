@@ -3,7 +3,7 @@ const { gql } = require('apollo-server')
 const typeDefs = gql`
     type Mutation {
       deleteEquipment(id: String): Equipment
-      deleteSupply: [Supply]
+      deleteSupply(id: String): Supply
     }
 `
 
